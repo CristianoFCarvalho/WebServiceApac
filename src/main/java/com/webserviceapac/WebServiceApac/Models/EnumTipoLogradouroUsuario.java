@@ -1,7 +1,6 @@
 package com.webserviceapac.WebServiceApac.Models;
 
-public enum EnumLogradouroUsuario {
-
+public enum EnumTipoLogradouroUsuario {
     ACESSO,
     ADRO,
     ALAMEDA,
@@ -9,6 +8,4 @@ public enum EnumLogradouroUsuario {
     ATALHO,
     AVENIDA,
     BELVEDERE
-
-
 }
