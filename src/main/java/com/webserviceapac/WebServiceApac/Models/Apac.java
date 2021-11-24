@@ -3,6 +3,7 @@ package com.webserviceapac.WebServiceApac.Models;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;
+import java.util.Objects;
 
 @Entity
 
@@ -80,367 +81,260 @@ public class Apac<DateTime> {
     @NotBlank
     private String NomeBairroEnderecoUsuario;
 
+    public Apac() {
 
+    }
 
-                    //LAUDO//
-    private Long CodigoLaudo;
 
-    @NotBlank
-    private Long CodLaudoPrestador;
+    public Long getCodigo() {
+        return codigo;
+    }
 
-    @NotBlank
-    private Long CnesSolicitante  ;
+    public void setCodigo(Long codigo) {
+        this.codigo = codigo;
+    }
 
-    @NotBlank
-    private Long CnesExecutante;
+    public Long getNomeUsuario() {
+        return NomeUsuario;
+    }
 
-    @NotBlank
-    private EnumTipoAPAC TipoAPAC;
+    public void setNomeUsuario(Long nomeUsuario) {
+        NomeUsuario = nomeUsuario;
+    }
 
-    @NotBlank
-    private DateTime DataInicioValidade;
+    public String getNomeMae() {
+        return NomeMae;
+    }
 
-    @NotBlank
-    private DateTime DataFimValidade;
+    public void setNomeMae(String nomeMae) {
+        NomeMae = nomeMae;
+    }
 
-    @NotBlank
-    private String DescricaoDiagnosticoInicial;
+    public String getNomeResponsavemUsuario() {
+        return NomeResponsavemUsuario;
+    }
 
-    private String Observacao;
+    public void setNomeResponsavemUsuario(String nomeResponsavemUsuario) {
+        NomeResponsavemUsuario = nomeResponsavemUsuario;
+    }
 
-    @NotBlank
-    private String CodigoCidPrincipal;
+    public String getTelefoneResponsavelUsuario() {
+        return TelefoneResponsavelUsuario;
+    }
 
+    public void setTelefoneResponsavelUsuario(String telefoneResponsavelUsuario) {
+        TelefoneResponsavelUsuario = telefoneResponsavelUsuario;
+    }
 
-    private Long CodCidSecundario;
+    public Enumnacionalidade getIdentificaNacionalidade() {
+        return IdentificaNacionalidade;
+    }
 
-    private String CodigoCidCausasAssociadas;
+    public void setIdentificaNacionalidade(Enumnacionalidade identificaNacionalidade) {
+        IdentificaNacionalidade = identificaNacionalidade;
+    }
 
-    @NotBlank
-    private String NumCNSProfissionalSolicitante;
+    public Long getCodigoPais() {
+        return CodigoPais;
+    }
 
+    public void setCodigoPais(Long codigoPais) {
+        CodigoPais = codigoPais;
+    }
 
-    private String NumCPFProfisionalSolicitante ;
+    public Date getDataEntradaPais() {
+        return DataEntradaPais;
+    }
 
-    @NotBlank
-    private String NomeProfissionalSolicitante;
+    public void setDataEntradaPais(Date dataEntradaPais) {
+        DataEntradaPais = dataEntradaPais;
+    }
 
-    private EnumSiglaOrgaoProfissional SgOrgaoProfissionalSolicitante ;
+    public Long getMunicipioNaturalidade() {
+        return MunicipioNaturalidade;
+    }
 
-    @NotBlank
-    private String UfConsProfissionalSolicitante ;
+    public void setMunicipioNaturalidade(Long municipioNaturalidade) {
+        MunicipioNaturalidade = municipioNaturalidade;
+    }
 
-    @NotBlank
-    private String  NumConsProfissionalSolicitante ;
+    public Enumsexo getSexo() {
+        return Sexo;
+    }
 
-    @NotBlank
-    private String NumCboProfissionalSolicitante;
+    public void setSexo(Enumsexo sexo) {
+        Sexo = sexo;
+    }
 
-    @NotBlank
-    private Date DataSolicitacao;
+    public Date getDataNascimento() {
+        return DataNascimento;
+    }
 
-    @NotBlank
-    private EnumCodigoCaraterInternacao CodigoCaraterInternacao ;
+    public void setDataNascimento(Date dataNascimento) {
+        DataNascimento = dataNascimento;
+    }
 
-    @NotBlank
-    private String CodTabelaSusPrincipal;
+    public EnumIndicaRacaCor getIndicaRacaCor() {
+        return IndicaRacaCor;
+    }
 
-    @NotBlank
-    private Long NumSessoes1Mes;
+    public void setIndicaRacaCor(EnumIndicaRacaCor indicaRacaCor) {
+        IndicaRacaCor = indicaRacaCor;
+    }
 
-    @NotBlank
-    private Long NumSessoes2mes;
+    public Long getCodigoEtiniaIndigena() {
+        return CodigoEtiniaIndigena;
+    }
 
-    @NotBlank
-    private Long NumSessoes3Mes;
+    public void setCodigoEtiniaIndigena(Long codigoEtiniaIndigena) {
+        CodigoEtiniaIndigena = codigoEtiniaIndigena;
+    }
 
+    public String getNumeroProntuario() {
+        return NumeroProntuario;
+    }
 
+    public void setNumeroProntuario(String numeroProntuario) {
+        NumeroProntuario = numeroProntuario;
+    }
 
-                        //Procedimentos//
-
-    @NotBlank
-    private String CodTabelaSusOficial;
-
-    @NotBlank
-  //  private Long NumSessoes1Mes;
-
-    @NotBlank
-    private Long NumSessoes2Mes;
-
-    @NotBlank
-   // private Long NumSessoes3Mes;
-
-
-
-
-                    //Oncologia//
-
-    @NotBlank
-    private String  DscLocalizacaoTumorPrimario;
-
-    @NotBlank
-    private String CodCidTopografia;
-
-    @NotBlank
-    private EnunTipLinfonodoReginvadido TipLinfonodoReginvadido;
-
-    @NotBlank
-    private Long NumNaoAvaliaveis;
-
-    @NotBlank
-    private String DsclocalizacaoMetastase;
-
-    @NotBlank
-    private EnumTipoEstadioUICC TipoEstadioUICC ;
-
-    private Long DscEstadioOutro;
-
-    @NotBlank
-    private Long NumGrauHistopatologico;
-
-    @NotBlank
-    private String DscDiagnosticoCitohistopat;
-
-    @NotBlank
-    private Date DatDiagnosticoCitoHistopato;
-
-                    //Tratamentos Anteriores
-    @NotBlank
-    private String CodCid;
-
-    @NotBlank
-    private Date DataInicioTratamentoAnterior;
-
-                    //Quimioterapia
-    @NotBlank
-    private Boolean IndContinuidadeTratamento;
-
-    @NotBlank
-    private Date dataInicioTratamento;
-
-    @NotBlank
-    private String  DscEsquema;
-
-    @NotBlank
-    private Long NumTotalMesPlanejado;
-
-            //Radioterapia
-
-    @NotBlank
-   // private Boolean IndContinuidadeTratamento;
-
-    @NotBlank
-    private Date InicioTratamento;
-
-    @NotBlank
-    private EnumTipFinalidadeTratamento TipFinalidadeTratamento;
-
-    @NotBlank
-  //  private String CodCid;
-
-            //Area Irradiada
-    @NotBlank
-    private String DscAreaIrradiada;
-
-    @NotBlank
-    private Long Numincercoes;
-
-    @NotBlank
-    private Date DateInicioAreaIrradiada;
-
-    @NotBlank
-    private Date DateTerminoAreaIrradiada;
-
-
-                //Nefrologia
-    @NotBlank
-    private Date DataPrimeiraDialiseRealizada;
-
-    @NotBlank
-    private String VlrPeso;
-
-    @NotBlank
-    private String VlrAltura;
-
-    @NotBlank
-    private String VlrDiurese;
-
-    @NotBlank
-    private String VlrGlicose;
-
-    @NotBlank
-    private String VlrAlbimina;
-
-    @NotBlank
-    private String VlrHbPrimeroAtendimento;
-
-    @NotBlank
-    private Boolean IndAcessoVascular;
-
-    @NotBlank
-    private Boolean IndHivPrimeiroAtendimento;
-
-    @NotBlank
-    private Boolean IndHcvPrimeiroAtendimento;
-
-    @NotBlank
-    private Boolean IndHbsagPrimAtendimento;
-
-    @NotBlank
-    private Boolean IndUltrasonografiaAbdominal;
-
-    @NotBlank
-    private String VlrHbSeguimento;
-
-    @NotBlank
-    private String VlrAlbuminaSeguimento ;
-
-    @NotBlank
-    private Long VlrIntervencaoFistola;
-
-    @NotBlank
-    private Boolean IndListaCncdo;
-
-    @NotBlank
-    private Boolean IndHivSeguimento;
-
-    @NotBlank
-    private Boolean IndHcvSeguimento;
-
-    @NotBlank
-    private Boolean IndHbsagSeguimento;
-
-    @NotBlank
-  //  private Long NumSessoes1Mes;
-
-  // private Long NumSessoes2Mes;
-
-  //  private Long NumSessoes3Mes;
-
-
-
-            //Protese Mamaria
-    @NotBlank
-    private Long CodCnesFces;
-
-    @NotBlank
-    private EnumTipMarcaProtese  TipMarcaProtese;
-
-    @NotBlank
-    private Long VlrAnoImplantacaoProtese;
-
-            //Pre-Bariatrica
-
-    @NotBlank
-    private Date DatPrimeiraAvaliacao;
-
-    @NotBlank
-    private String VlrImcPrimAvaliacao;
-
-    @NotBlank
- //   private String VlrPeso;
-
-    @NotBlank
-    private Date DatAvaliacaoAtual;
-
-    @NotBlank
-    private String  ValorImcAtual;
-
-    @NotBlank
-    private EnumTipPontuacaoBaros TipPontuacaoBaros;
-
-    @NotBlank
-    private Boolean IndComorbUsoMedicamento;
-
-    @NotBlank
-    private Boolean IndComorbAtividadeFisica;
-
-    @NotBlank
-    private Boolean IndImcPerdaPonderal;
-
-    @NotBlank
-    private Boolean IndParticipaReuniaoGrupo;
-
-    @NotBlank
-    private Boolean IndAvaliacaoRiscosCirurgico;
-
-    @NotBlank
-    private EnumTipoOcupacaoAvaliacao TipoOcupacaoAvaliacao;
-
-    @NotBlank
-    private Boolean IndRealizadoExamesLaboratr;
-
-    @NotBlank
-    private EnumIndAptoProcedCirurgico IndAptoProcedCirurgico;
-
-    @NotBlank
-    private String ListaExamesPreBariatrica;
-
-    @NotBlank
-    private String ListaCidComorbiPreBariatrica;
-
-            //Pos-Bariatrica
-    @NotBlank
-    private String VlrImcAtual;
-
-    @NotBlank
-    private Long VlrPercPesoPerdido;
-
-    @NotBlank
-    private String VlrKgPerdidos;
-
-    @NotBlank
-//    private String CodTabelaSusOficial;
-
-    @NotBlank
-    private Date DatCirurgiaBariatrica;
-
-    @NotBlank
-    private Long NumApacCirurgiaBariatrica;
-
-    @NotBlank
-    private Long NumMesAcompanhamento;
-
-    @NotBlank
-    private Long NumAnoAcompanhamento;
-
-    @NotBlank
- //   private EnumTipPontuacaoBaros  TipPontuacaoBaros;
-
-    @NotBlank
-    private Boolean IndComorbUsoMedicamentos;
-
-    @NotBlank
-    private Boolean IndComorbusoPolivitaminicos;
-
-    @NotBlank
-//    private Boolean IndComorbAtividadeFisica;
-
-    @NotBlank
-    private Boolean IndiComorbGanhoPeso;
-
-    @NotBlank
-    private Boolean IndComorbAliemtoSaudavel;
-
-                //Plastica Pos-Bariátrica
-    @NotBlank
- //   private String CodTabelaSusOficial;
-
-    @NotBlank
-    private Long ValosTempoPosBariatrica;
-
-
-                //CID10 Pos-Bariátrica
-    @NotBlank
-    private String  ListaCidComorbidadesPosBariatricas;
-
-
-
-
-
-
-
-
+    public String getNumeroTelefone() {
+        return NumeroTelefone;
+    }
+
+    public void setNumeroTelefone(String numeroTelefone) {
+        NumeroTelefone = numeroTelefone;
+    }
+
+    public String getNumeroTelefoneCelular() {
+        return NumeroTelefoneCelular;
+    }
+
+    public void setNumeroTelefoneCelular(String numeroTelefoneCelular) {
+        NumeroTelefoneCelular = numeroTelefoneCelular;
+    }
+
+    public String getNumeroTelefoneContato() {
+        return NumeroTelefoneContato;
+    }
+
+    public void setNumeroTelefoneContato(String numeroTelefoneContato) {
+        NumeroTelefoneContato = numeroTelefoneContato;
+    }
+
+    public String getNumeroCartaoNacional() {
+        return NumeroCartaoNacional;
+    }
+
+    public void setNumeroCartaoNacional(String numeroCartaoNacional) {
+        NumeroCartaoNacional = numeroCartaoNacional;
+    }
+
+    public String getNumeroCPF() {
+        return NumeroCPF;
+    }
+
+    public void setNumeroCPF(String numeroCPF) {
+        NumeroCPF = numeroCPF;
+    }
+
+    public Long getCepUsuario() {
+        return CepUsuario;
+    }
+
+    public void setCepUsuario(Long cepUsuario) {
+        CepUsuario = cepUsuario;
+    }
+
+    public String getLogradouroUsuario() {
+        return LogradouroUsuario;
+    }
+
+    public void setLogradouroUsuario(String logradouroUsuario) {
+        LogradouroUsuario = logradouroUsuario;
+    }
+
+    public EnumTipoLogradouroUsuario getTipoLogradouroUsuario() {
+        return TipoLogradouroUsuario;
+    }
+
+    public void setTipoLogradouroUsuario(EnumTipoLogradouroUsuario tipoLogradouroUsuario) {
+        TipoLogradouroUsuario = tipoLogradouroUsuario;
+    }
+
+    public Long getNumeroPredialEnderecoUsuario() {
+        return NumeroPredialEnderecoUsuario;
+    }
+
+    public void setNumeroPredialEnderecoUsuario(Long numeroPredialEnderecoUsuario) {
+        NumeroPredialEnderecoUsuario = numeroPredialEnderecoUsuario;
+    }
+
+    public String getDescricaoComplementoEndereco() {
+        return DescricaoComplementoEndereco;
+    }
+
+    public void setDescricaoComplementoEndereco(String descricaoComplementoEndereco) {
+        DescricaoComplementoEndereco = descricaoComplementoEndereco;
+    }
+
+    public Long getCodigoIBGEEnderecoUsuario() {
+        return CodigoIBGEEnderecoUsuario;
+    }
+
+    public void setCodigoIBGEEnderecoUsuario(Long codigoIBGEEnderecoUsuario) {
+        CodigoIBGEEnderecoUsuario = codigoIBGEEnderecoUsuario;
+    }
+
+    public String getNomeBairroEnderecoUsuario() {
+        return NomeBairroEnderecoUsuario;
+    }
+
+    public void setNomeBairroEnderecoUsuario(String nomeBairroEnderecoUsuario) {
+        NomeBairroEnderecoUsuario = nomeBairroEnderecoUsuario;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Apac)) return false;
+        Apac<?> apac = (Apac<?>) o;
+        return Objects.equals(getCodigo(), apac.getCodigo()) && Objects.equals(getNomeUsuario(), apac.getNomeUsuario()) && Objects.equals(getNomeMae(), apac.getNomeMae()) && Objects.equals(getNomeResponsavemUsuario(), apac.getNomeResponsavemUsuario()) && Objects.equals(getTelefoneResponsavelUsuario(), apac.getTelefoneResponsavelUsuario()) && getIdentificaNacionalidade() == apac.getIdentificaNacionalidade() && Objects.equals(getCodigoPais(), apac.getCodigoPais()) && Objects.equals(getDataEntradaPais(), apac.getDataEntradaPais()) && Objects.equals(getMunicipioNaturalidade(), apac.getMunicipioNaturalidade()) && getSexo() == apac.getSexo() && Objects.equals(getDataNascimento(), apac.getDataNascimento()) && getIndicaRacaCor() == apac.getIndicaRacaCor() && Objects.equals(getCodigoEtiniaIndigena(), apac.getCodigoEtiniaIndigena()) && Objects.equals(getNumeroProntuario(), apac.getNumeroProntuario()) && Objects.equals(getNumeroTelefone(), apac.getNumeroTelefone()) && Objects.equals(getNumeroTelefoneCelular(), apac.getNumeroTelefoneCelular()) && Objects.equals(getNumeroTelefoneContato(), apac.getNumeroTelefoneContato()) && Objects.equals(getNumeroCartaoNacional(), apac.getNumeroCartaoNacional()) && Objects.equals(getNumeroCPF(), apac.getNumeroCPF()) && Objects.equals(getCepUsuario(), apac.getCepUsuario()) && Objects.equals(getLogradouroUsuario(), apac.getLogradouroUsuario()) && getTipoLogradouroUsuario() == apac.getTipoLogradouroUsuario() && Objects.equals(getNumeroPredialEnderecoUsuario(), apac.getNumeroPredialEnderecoUsuario()) && Objects.equals(getDescricaoComplementoEndereco(), apac.getDescricaoComplementoEndereco()) && Objects.equals(getCodigoIBGEEnderecoUsuario(), apac.getCodigoIBGEEnderecoUsuario()) && Objects.equals(getNomeBairroEnderecoUsuario(), apac.getNomeBairroEnderecoUsuario());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getCodigo(), getNomeUsuario(), getNomeMae(), getNomeResponsavemUsuario(), getTelefoneResponsavelUsuario(), getIdentificaNacionalidade(), getCodigoPais(), getDataEntradaPais(), getMunicipioNaturalidade(), getSexo(), getDataNascimento(), getIndicaRacaCor(), getCodigoEtiniaIndigena(), getNumeroProntuario(), getNumeroTelefone(), getNumeroTelefoneCelular(), getNumeroTelefoneContato(), getNumeroCartaoNacional(), getNumeroCPF(), getCepUsuario(), getLogradouroUsuario(), getTipoLogradouroUsuario(), getNumeroPredialEnderecoUsuario(), getDescricaoComplementoEndereco(), getCodigoIBGEEnderecoUsuario(), getNomeBairroEnderecoUsuario());
+    }
+
+    public Apac(Long codigo, Long nomeUsuario, String nomeMae, String nomeResponsavemUsuario, String telefoneResponsavelUsuario, Enumnacionalidade identificaNacionalidade, Long codigoPais, Date dataEntradaPais, Long municipioNaturalidade, Enumsexo sexo, Date dataNascimento, EnumIndicaRacaCor indicaRacaCor, Long codigoEtiniaIndigena, String numeroProntuario, String numeroTelefone, String numeroTelefoneCelular, String numeroTelefoneContato, String numeroCartaoNacional, String numeroCPF, Long cepUsuario, String logradouroUsuario, EnumTipoLogradouroUsuario tipoLogradouroUsuario, Long numeroPredialEnderecoUsuario, String descricaoComplementoEndereco, Long codigoIBGEEnderecoUsuario, String nomeBairroEnderecoUsuario) {
+        this.codigo = codigo;
+        NomeUsuario = nomeUsuario;
+        NomeMae = nomeMae;
+        NomeResponsavemUsuario = nomeResponsavemUsuario;
+        TelefoneResponsavelUsuario = telefoneResponsavelUsuario;
+        IdentificaNacionalidade = identificaNacionalidade;
+        CodigoPais = codigoPais;
+        DataEntradaPais = dataEntradaPais;
+        MunicipioNaturalidade = municipioNaturalidade;
+        Sexo = sexo;
+        DataNascimento = dataNascimento;
+        IndicaRacaCor = indicaRacaCor;
+        CodigoEtiniaIndigena = codigoEtiniaIndigena;
+        NumeroProntuario = numeroProntuario;
+        NumeroTelefone = numeroTelefone;
+        NumeroTelefoneCelular = numeroTelefoneCelular;
+        NumeroTelefoneContato = numeroTelefoneContato;
+        NumeroCartaoNacional = numeroCartaoNacional;
+        NumeroCPF = numeroCPF;
+        CepUsuario = cepUsuario;
+        LogradouroUsuario = logradouroUsuario;
+        TipoLogradouroUsuario = tipoLogradouroUsuario;
+        NumeroPredialEnderecoUsuario = numeroPredialEnderecoUsuario;
+        DescricaoComplementoEndereco = descricaoComplementoEndereco;
+        CodigoIBGEEnderecoUsuario = codigoIBGEEnderecoUsuario;
+        NomeBairroEnderecoUsuario = nomeBairroEnderecoUsuario;
+    }
 }
 
 
